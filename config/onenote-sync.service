@@ -1,0 +1,12 @@
+[Unit]
+Description=RemarkableSyncClient Watcher
+After=local-fs.target
+
+[Service]
+Type=simple
+ExecStart=/home/root/onenote-sync/watcher /home/root/.local/share/remarkable/xochitl
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target
